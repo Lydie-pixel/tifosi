@@ -9,7 +9,7 @@ CREATE TABLE marque (
 -- Table Boissons
 CREATE TABLE boisson (
     id_boisson INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
+    nom VARCHAR(100) NOT NULL, 
     id_marque INT,
     FOREIGN KEY (id_marque) REFERENCES marque(id_marque)
 );

@@ -3,7 +3,7 @@ INSERT INTO marque (nom) VALUES
 ("Coca-Cola"),
 ("Cristaline"),
 ("Monster"),
-("Persico");
+("Persico"); 
 
 -- Donnée du tableau des boissons
 INSERT INTO boisson (nom, id_marque) VALUES

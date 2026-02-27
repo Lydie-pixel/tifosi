@@ -1,0 +1,10 @@
+-- 1. Afficher la liste des noms des focaccias par ordre alphabétique croissant,
+-- 2. Afficher le nombre total d'ingrédients,
+-- 3. Afficher le prix moyen des focaccias,
+-- 4. Afficher la liste des boissons avec leur marque, triée par nom de boisson,
+-- 5. Afficher la liste des ingrédients pour une Raclaccia,
+-- 6. Afficher le nom et le nombre d'ingrédients pour chaque foccacia,
+-- 7. Afficher le nom de la focaccia qui a le plus d'ingrédients,
+-- 8. Afficher la liste des focaccia qui contiennent de l'ail,
+-- 9. Afficher la liste des ingrédients inutilisés,
+-- 10. Afficher la liste des focaccia qui n'ont pas de champignons.
