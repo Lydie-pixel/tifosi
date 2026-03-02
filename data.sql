@@ -141,23 +141,9 @@ INSERT INTO focaccia_ingredient (id_focaccia, id_ingredient, quantite) VALUES
 (8, 21, 80),    -- Pomme de terre
 (8, 13, 80),    -- Jambon fumé
 (8, 1, 2),      -- Ail
-(8, 6, 20),     -- Artichaut
+(8, 3, 20),     -- Artichaut
 (8, 7, 40),     -- Champignon
 (8, 18, 50),    -- Parmesan
 (8, 20, 1),     -- Poivre
 (8, 16, 20),    -- Olive noire
 (8, 14, 50);    -- Œuf
-
---Donnée test
-
---Clients
-INSERT INTO client (nom, email, code_postal) VALUES
-('Alice Dupont', 'alice@mail.com', '69001'),
-('Bob Martin', 'bob@mail.com', '69002'),
-('Chloé Bernard', 'chloe@mail.com', '69003');
-
---Commandes
-INSERT INTO commande (id_client, id_focaccia, id_boisson, date_achat) VALUES
-(1, 3, 1, '2026-02-25'),  -- Alice achète Raclaccia + Coca-Cola zéro
-(2, 1, 10, '2026-02-26'), -- Bob achète Mozaccia + Monster energy ultra gold
-(3, 5, 5, '2026-02-27');  -- Chloé achète Tradizione + Capri-Sun
