@@ -1,15 +1,16 @@
+CREATE DATABASE tifosi;
 USE tifosi;
 
 -- Table Marques
 CREATE TABLE marque (
     id_marque INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL UNIQUE
+    nom VARCHAR(50) NOT NULL UNIQUE
 );
 
 -- Table Boissons
 CREATE TABLE boisson (
     id_boisson INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL, 
+    nom VARCHAR(50) NOT NULL, 
     id_marque INT,
     FOREIGN KEY (id_marque) REFERENCES marque(id_marque)
 );
@@ -17,14 +18,14 @@ CREATE TABLE boisson (
 -- Table Focaccias
 CREATE TABLE focaccia (
     id_focaccia INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL UNIQUE,
+    nom VARCHAR(50) NOT NULL UNIQUE,
     prix DECIMAL(5,2) NOT NULL
 );
 
 -- Table Ingrédients
 CREATE TABLE ingredient (
     id_ingredient INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL UNIQUE
+    nom VARCHAR(50) NOT NULL UNIQUE
 );
 
 -- Table de liaison Focaccia-Ingrédient
@@ -40,9 +41,9 @@ CREATE TABLE focaccia_ingredient (
 -- Table Clients
 CREATE TABLE client (
     id_client INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    code_postal VARCHAR(10) NOT NULL
+    nom VARCHAR(50) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    code_postal VARCHAR(6) NOT NULL
 );
 
 -- Table de liaison Client-Boisson-Focaccia
