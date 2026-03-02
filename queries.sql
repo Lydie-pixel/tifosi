@@ -1,6 +1,6 @@
 -- 1. Afficher la liste des noms des focaccias par ordre alphabétique
 -- Résultat attendu : une liste de noms de focaccias triée de A à Z
--- Résultat obtenu : La liste des noms des faccacias est bien trier de A à Z
+-- Résultat obtenu : La liste des noms des foccacias est bien triée de A à Z
 -- Écart: Aucun. Le tri correspond à l'ordre alphabétique attendu.
 -- Requête SQL :
 
@@ -12,7 +12,7 @@ ORDER BY nom ASC;
 
 
 -- 2. Afficher le nombre total d'ingrédients,
--- Résultat attendu : Champ avec le nombre total d'ingrédients égale à 25
+-- Résultat attendu : Champ avec le nombre total d'ingrédients (25)
 -- Résultat obtenu : 25 ingrédients sont présents dans la table des ingrédients
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -25,7 +25,7 @@ FROM ingredient;
 -- 3. Afficher le prix moyen des focaccias,
 -- Résultat attendu : Calcul du prix moyen des focaccias soit 10.37€
 -- Résultat obtenu : 10.38 est le prix moyen des focaccias
--- Écart: L'arondi à deux décimals donne un résultat arrondi au nombre suppérieur
+-- Écart: L'arrondi à deux décimales donne un résultat arrondi avec SQL au nombre supérieur
 -- Requête SQL :
 
 SELECT ROUND(AVG(prix), 2) AS prix_moyen
@@ -35,8 +35,8 @@ FROM focaccia;
 
 -- 4. Afficher la liste des boissons avec leur marque, triée par nom de boisson,
 -- Résultat attendu : une liste de noms des boissons avec leur marque triée de A à Z
--- Résultat obtenu : Un tableau avec en colonne 1 le nom des boissons trier par ordre alphabetique et en colonne 2 leurs marques
--- Écart: -- Écart: Aucun. Le tri correspond à l'ordre alphabétique attendu avec le bon nom de marque associé aux boissons.
+-- Résultat obtenu : Un tableau avec en colonne 1 le nom des boissons triée par ordre alphabetique et en colonne 2 leurs marques
+-- Écart: Aucun. Le tri correspond à l'ordre alphabétique attendu avec le bon nom de marque associé aux boissons.
 -- Requête SQL :
 
 SELECT b.nom AS nom_boisson, m.nom AS nom_marque
@@ -47,7 +47,7 @@ ORDER BY b.nom;
 
 
 -- 5. Afficher la liste des ingrédients pour une Raclaccia,
--- Résultat attendu : une liste des ingrédients utilisés dans la focaccia Raclaccia
+-- Résultat attendu : une liste des ingrédients utilisés dans la focaccia Raclaccia (Base tomate, raclette, cresson, ail, champignon, parmesan, poivre)
 -- Résultat obtenu : Ail ; Base Tomate ; Champignon ; Cresson ; Parmesan ; Poivre ; Raclette
 -- Écart: Aucun. La requête retourne la liste des ingrédients de la Raclaccia
 -- Requête SQL :
@@ -62,7 +62,7 @@ WHERE f.nom = 'Raclaccia';
 
 -- 6. Afficher le nom et le nombre d'ingrédients pour chaque foccacia,
 -- Résultat attendu : les listes des noms de focaccias avec le nombre d'ingrédients associés
--- Résultat obtenu : Un tableau de deux colonnes avec d'un coté le nom des faccacias et en face le nombres d'ingrédient
+-- Résultat obtenu : Un tableau de deux colonnes avec d'un coté le nom des focaccias et en face le nombres d'ingrédient
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
 
@@ -76,7 +76,7 @@ GROUP BY f.id_focaccia, f.nom;
 
 
 -- 7. Afficher le nom de la focaccia qui a le plus d'ingrédients,
--- Résultat attendu : Champ avec le nom de la focaccia qui a le plus d'ingrédients soit la "Paysanne"
+-- Résultat attendu : Champ avec le nom de la focaccia qui a le plus d'ingrédients (Paysanne")
 -- Résultat obtenu : Paysanne
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -93,7 +93,7 @@ LIMIT 1;
 
 -- 8. Afficher la liste des focaccia qui contiennent de l'ail,
 -- Résultat attendu : Liste des noms de focaccias qui contiennent de l'ail
--- Résultat obtenu : Une liste des 4 faccaicas contenant de l'Ail 
+-- Résultat obtenu : Une liste des 4 focaccias contenant de l’ail
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
 
@@ -106,7 +106,7 @@ WHERE i.nom = 'Ail';
 
 
 -- 9. Afficher la liste des ingrédients inutilisés,
--- Résultat attendu : une liste de tous les ingrédients qui ne sont pas utilisés soit le salami et les tomate cerises
+-- Résultat attendu : une liste de tous les ingrédients qui ne sont pas utilisés (le salami et les tomate cerises)
 -- Résultat obtenu : Salami ; Tomate cerise
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -120,7 +120,7 @@ WHERE fi.id_ingredient IS NULL;
 
 
 -- 10. Afficher la liste des focaccia qui n'ont pas de champignons.
--- Résultat attendu : Liste des noms de focaccias qui ne contiennent pas de champignons
+-- Résultat attendu : Liste des noms de focaccias qui ne contiennent pas de champignons (Américaine et Hawaienne)
 -- Résultat obtenu : Américaine ; Hawaienne
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
