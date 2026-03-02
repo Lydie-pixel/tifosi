@@ -1,13 +1,35 @@
-CREATE DATABASE tifosi;
+-- ===================== Création de la base =====================
+
+
+CREATE DATABASE IF NOT EXISTS tifosi;
 USE tifosi;
 
--- Table Marques
+
+-- ===================== Création utilisateur MySQL pour la base tifosi =====================
+
+-- Note : Dans un contexte professionnel, le mot de passe et
+-- l'identifiant seraient stocké dans un fichier sécurisé (.env)
+
+CREATE USER IF NOT EXISTS 'tifosi_user'@'localhost'
+IDENTIFIED BY 'Tifosi2026!';
+
+GRANT ALL PRIVILEGES
+ON tifosi.*
+TO 'tifosi_user'@'localhost';
+
+FLUSH PRIVILEGES;
+
+
+
+-- ===================== Création des tables MySQL pour la base de donnée tifosi =====================
+
+-- Table des Marques
 CREATE TABLE marque (
     id_marque INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL UNIQUE
 );
 
--- Table Boissons
+-- Table des Boissons
 CREATE TABLE boisson (
     id_boisson INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL, 
@@ -15,14 +37,14 @@ CREATE TABLE boisson (
     FOREIGN KEY (id_marque) REFERENCES marque(id_marque)
 );
 
--- Table Focaccias
+-- Table des Focaccias
 CREATE TABLE focaccia (
     id_focaccia INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL UNIQUE,
     prix DECIMAL(5,2) NOT NULL
 );
 
--- Table Ingrédients
+-- Table des Ingrédients
 CREATE TABLE ingredient (
     id_ingredient INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL UNIQUE
@@ -38,7 +60,7 @@ CREATE TABLE focaccia_ingredient (
     FOREIGN KEY (id_ingredient) REFERENCES ingredient(id_ingredient)
 );
 
--- Table Clients
+-- Table des Clients
 CREATE TABLE client (
     id_client INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -52,7 +74,7 @@ CREATE TABLE commande (
     id_client INT NOT NULL,
     id_focaccia INT,
     id_boisson INT,
-    date_achat DATE,
+    date_achat DATE NOT NULL,
     FOREIGN KEY (id_client) REFERENCES client(id_client),
     FOREIGN KEY (id_focaccia) REFERENCES focaccia(id_focaccia),
     FOREIGN KEY (id_boisson) REFERENCES boisson(id_boisson)

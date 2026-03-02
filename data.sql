@@ -1,3 +1,5 @@
+-- Données issues des fichiers Excel fournis (marque.xlsx, boisson.xlsx, foccaica.xlsx et ingredients.xlsx.)
+
 -- Donnée du tableau des marques
 INSERT INTO marque (nom) VALUES
 ("Coca-Cola"),
@@ -18,7 +20,7 @@ INSERT INTO boisson (nom, id_marque) VALUES
 ("Lipton Peach", 4),
 ("Monster energy ultra gold", 3),
 ("Monster energy ultra blue", 3),
-("Eau de source ", 2);
+("Eau de source", 2);
 
 -- Donnée du tableau des focaccias
 INSERT INTO focaccia (nom, prix) VALUES
@@ -34,7 +36,7 @@ INSERT INTO focaccia (nom, prix) VALUES
 -- Donnée du tableau des ingrédients
 INSERT INTO ingredient (nom) VALUES
 ("Ail"),
-("Annanas"),
+("Ananas"),
 ("Artichaut"),
 ("Bacon"),
 ("Base Tomate"),
