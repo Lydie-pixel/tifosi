@@ -12,7 +12,7 @@ ORDER BY nom ASC;
 
 
 -- 2. Afficher le nombre total d'ingrédients,
--- Résultat attendu : Champ avec le nombre total d'ingrédients égale à 25
+-- Résultat attendu : Champ avec le nombre total d'ingrédients (25)
 -- Résultat obtenu : 25 ingrédients sont présents dans la table des ingrédients
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -47,7 +47,7 @@ ORDER BY b.nom;
 
 
 -- 5. Afficher la liste des ingrédients pour une Raclaccia,
--- Résultat attendu : une liste des ingrédients utilisés dans la focaccia Raclaccia
+-- Résultat attendu : une liste des ingrédients utilisés dans la focaccia Raclaccia (Base tomate, raclette, cresson, ail, champignon, parmesan, poivre)
 -- Résultat obtenu : Ail ; Base Tomate ; Champignon ; Cresson ; Parmesan ; Poivre ; Raclette
 -- Écart: Aucun. La requête retourne la liste des ingrédients de la Raclaccia
 -- Requête SQL :
@@ -76,7 +76,7 @@ GROUP BY f.id_focaccia, f.nom;
 
 
 -- 7. Afficher le nom de la focaccia qui a le plus d'ingrédients,
--- Résultat attendu : Champ avec le nom de la focaccia qui a le plus d'ingrédients soit la "Paysanne"
+-- Résultat attendu : Champ avec le nom de la focaccia qui a le plus d'ingrédients (Paysanne")
 -- Résultat obtenu : Paysanne
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -106,7 +106,7 @@ WHERE i.nom = 'Ail';
 
 
 -- 9. Afficher la liste des ingrédients inutilisés,
--- Résultat attendu : une liste de tous les ingrédients qui ne sont pas utilisés soit le salami et les tomate cerises
+-- Résultat attendu : une liste de tous les ingrédients qui ne sont pas utilisés (le salami et les tomate cerises)
 -- Résultat obtenu : Salami ; Tomate cerise
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
@@ -120,7 +120,7 @@ WHERE fi.id_ingredient IS NULL;
 
 
 -- 10. Afficher la liste des focaccia qui n'ont pas de champignons.
--- Résultat attendu : Liste des noms de focaccias qui ne contiennent pas de champignons
+-- Résultat attendu : Liste des noms de focaccias qui ne contiennent pas de champignons (Américaine et Hawaienne)
 -- Résultat obtenu : Américaine ; Hawaienne
 -- Écart: Aucun. Le résultat correspond aux données présentes dans la base.
 -- Requête SQL :
